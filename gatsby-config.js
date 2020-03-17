@@ -24,6 +24,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/posts`,
+        name: 'blog'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: '#142B41',
