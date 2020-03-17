@@ -1,6 +1,6 @@
 module.exports = {
   title: 'LeandroMDS',
-  siteUrl: 'http://leandromsilva.com.br',
+  siteUrl: 'https://leandromsilva.com.br',
   description:
     'Um site pessoal, criado para compartilhar meus conhecimentos em programação e meus projetos pessoais',
   social: [

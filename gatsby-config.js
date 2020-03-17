@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'http://www.leandromsilva.com.br'
+        siteUrl: 'https://www.leandromsilva.com.br'
       }
     },
     {
