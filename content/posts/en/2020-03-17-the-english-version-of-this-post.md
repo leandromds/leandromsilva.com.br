@@ -1,4 +1,5 @@
 ---
+permalink: /the-path-of-this-post
 language: en
 layout: post
 date: '2020-03-17 07:14:03'
