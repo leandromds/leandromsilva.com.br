@@ -34,15 +34,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/posts/en`,
-        name: 'englishPosts'
+        path: `${__dirname}/content/posts`,
+        name: 'blog'
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/posts/pt-br`,
-        name: 'portuguesePosts'
+        path: `${__dirname}/static/assets/images/uploads`,
+        name: 'uploads'
       }
     },
     {
@@ -90,7 +92,23 @@ module.exports = {
         footnotes: true,
         pedantic: true,
         gfm: true,
-        plugins: []
+        plugins: [
+          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1282,
+              linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static/assets/'
+            }
+          },
+          'gatsby-remark-responsive-iframe'
+        ]
       }
     },
     {

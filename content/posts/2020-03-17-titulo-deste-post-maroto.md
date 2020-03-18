@@ -1,5 +1,4 @@
 ---
-permalink: /teste-post-pt-br
 language: pt-br
 layout: post
 date: '2020-03-17 07:16:40'

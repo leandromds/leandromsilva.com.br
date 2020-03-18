@@ -11,12 +11,11 @@ publish_mode: editorial_workflow
 collections:
   - label: Posts - Versão em Inglês # Used in the UI
     name: english_posts # Used in routes, e.g., /admin/collections/blog
-    folder: content/posts/en # The path to the folder where the documents are stored
+    folder: content/posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     filter: {field: language, value: en}
     fields: # The fields for each document, usually in front matter
-      - { label: Permalink, name: permalink, widget: string, default: '{{slug}}' }  
       - { label: Idioma, name: language, widget: select, options: ["en", "pt-br"]}
       - { label: Layout, name: layout, widget: hidden, default: post }
       - {
@@ -32,12 +31,11 @@ collections:
       - { label: Conteúdo, name: body, widget: markdown }
   - label: Posts - Versões em Português # Used in the UI
     name: brazilian_portuguese_posts # Used in routes, e.g., /admin/collections/blog
-    folder: content/posts/pt-br # The path to the folder where the documents are stored
+    folder: content/posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     filter: {field: language, value: pt-br}
     fields: # The fields for each document, usually in front matter
-      - { label: Permalink, name: permalink, widget: string, default: '{{slug}}' }
       - { label: Idioma, name: language, widget: select, options: ["en", "pt-br"]}
       - { label: Layout, name: layout, widget: hidden, default: post }
       - {
