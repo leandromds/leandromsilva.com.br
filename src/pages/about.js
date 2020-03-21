@@ -1,3 +1,13 @@
 import React from 'react'
+import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
 
-export default () => <h1>About Me</h1>
+export default () => {
+  const intl = useIntl()
+
+  return (
+    <div>
+      <h1>{intl.formatMessage({ id: 'about.title' })}</h1>
+      <p>{intl.formatMessage({ id: 'about.description' })}</p>
+    </div>
+  )
+}

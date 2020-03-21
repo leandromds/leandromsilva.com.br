@@ -68,11 +68,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
+    const slug = node.fields.slug
+
     createPage({
-      path: node.fields.slug,
+      path: slug,
       component: blogPostTemplate,
       context: {
-        slug: node.fields.slug,
+        slug: slug,
         // the order is different here because of the DESC order
         previous: next,
         next: previous

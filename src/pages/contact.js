@@ -6,8 +6,8 @@ export default () => {
 
   return (
     <div>
-      <h1>{intl.formatMessage({ id: 'portfolio.title' })}</h1>
-      <p>{intl.formatMessage({ id: 'portfolio.description' })}</p>
+      <h1>{intl.formatMessage({ id: 'contact.title' })}</h1>
+      <p>{intl.formatMessage({ id: 'contact.description' })}</p>
     </div>
   )
 }

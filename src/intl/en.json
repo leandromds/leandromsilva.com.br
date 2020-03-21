@@ -1,0 +1,25 @@
+{
+  "ProvisionalPage": {
+    "title": "Website under construction",
+  },
+  "home": {
+    "title": "Home Page",
+    "description": "Comece seu próximo e ótimo projeto Gatsby com este padrão-starter-intl. Este iniciador de barebones é fornecido com os principais arquivos de configuração do Gatsby que você pode precisar."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Comece seu próximo e ótimo projeto Gatsby com este padrão-starter-intl. Este iniciador de barebones é fornecido com os principais arquivos de configuração do Gatsby que você pode precisar."
+  },
+  "blog": {
+    "title": "My Blog",
+    "description": "Comece seu próximo e ótimo projeto Gatsby com este padrão-starter-intl. Este iniciador de barebones é fornecido com os principais arquivos de configuração do Gatsby que você pode precisar."
+  },
+  "portfolio": {
+    "title": "My portifolio",
+    "description": "Comece seu próximo e ótimo projeto Gatsby com este padrão-starter-intl. Este iniciador de barebones é fornecido com os principais arquivos de configuração do Gatsby que você pode precisar."
+  },
+  "contact": {
+    "title": "Talk to me",
+    "description": "Comece seu próximo e ótimo projeto Gatsby com este padrão-starter-intl. Este iniciador de barebones é fornecido com os principais arquivos de configuração do Gatsby que você pode precisar."
+  }
+}

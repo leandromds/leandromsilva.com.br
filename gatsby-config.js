@@ -112,10 +112,24 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: 'gatsby-plugin-intl',
       options: {
-        langKeyDefault: 'pt-br',
-        useLangKeyLayout: false
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: ['pt-br', 'en'],
+        // language file path
+        defaultLanguage: 'pt-br',
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
       }
     },
     {
