@@ -1,24 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useIntl } from 'gatsby-plugin-intl'
+import { graphql } from 'gatsby'
 
-import Icon from '../assets/logo.svg'
-import Bg from '../assets/redox_01.png'
+import Logo from '../components/logo'
 
-export default () => {
+export default ({ data }) => {
   const intl = useIntl()
-  console.log(Icon)
+  const getSvgUrl = data.allFile.edges.filter(value => {
+    return value.node.extension === 'svg'
+  })
+  const bgImgUrl = data.allImageSharp.edges[1].node.fixed.src
+
+  console.log(bgImgUrl)
 
   return (
-    <ProviPage>
-      <img src={Icon} alt='Lenadro Silva web developer' />
+    <ProviPage bgImgUrl={bgImgUrl}>
+      {getSvgUrl && <Logo url={getSvgUrl[0].node.publicURL} />}
       <h1>{intl.formatMessage({ id: 'ProvisionalPage.title' })}</h1>
     </ProviPage>
   )
 }
 
+export const query = graphql`
+  query {
+    allFile {
+      edges {
+        node {
+          publicURL
+          extension
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          fixed {
+            src
+          }
+        }
+      }
+    }
+  }
+`
+
 const ProviPage = styled.main`
-  background-image: url(${Bg});
+  background-image: url(${props => props.bgImgUrl});
   color: ${props => props.theme.primary};
   align-items: center;
   display: flex;

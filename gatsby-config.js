@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/assets/images/uploads`,
-        name: 'uploads'
+        path: `${__dirname}/static/assets/images`,
+        name: 'images'
       }
     },
     {
@@ -52,6 +52,14 @@ module.exports = {
       options: {
         color: '#142B41',
         showSpinner: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/assets/images`
+        }
       }
     },
     {

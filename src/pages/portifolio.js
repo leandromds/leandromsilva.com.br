@@ -1,5 +1,5 @@
 import React from 'react'
-import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 
 export default () => {
   const intl = useIntl()
