@@ -10,12 +10,13 @@ export default ({ data }) => {
   const getSvgUrl = data.allFile.edges.filter(value => {
     return value.node.extension === 'svg'
   })
-  const bgImgUrl = data.allImageSharp.edges[1].node.fixed.src
-
-  console.log(bgImgUrl)
+  const bgImgUrl = data.allImageSharp.edges.filter(value => {
+    const findedBg = value.node.fixed.src.indexOf('what-the-hex')
+    return findedBg >= 0
+  })
 
   return (
-    <ProviPage bgImgUrl={bgImgUrl}>
+    <ProviPage bgImgUrl={bgImgUrl[0].node.fixed.src}>
       {getSvgUrl && <Logo url={getSvgUrl[0].node.publicURL} />}
       <h1>{intl.formatMessage({ id: 'ProvisionalPage.title' })}</h1>
     </ProviPage>
